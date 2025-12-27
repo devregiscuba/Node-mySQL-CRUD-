@@ -1,7 +1,11 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const Produtos = require("./models/Produtos");
 const bodyParser = require("body-parser");
+
+ // libera geral
+app.use(cors());
 
 //configuracao body parser
 app.use(bodyParser.urlencoded({ extended: false }));
